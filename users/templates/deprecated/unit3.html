@@ -1,0 +1,44 @@
+{% extends "users/base2.html" %}
+{% block content %}
+{% load static %}
+<a href="{% url 'aphg' %}">Back</a>
+
+<h2>Unit 3</h2>
+<br><br>
+<h4>Chapter 4 Guided Reading</h4>
+<a href="{% url 'hview' %}?p=ch4">View</a>
+<br><br>
+<h4>Chapter 5 Guided Reading</h4>
+<a href="{% url 'hview' %}?p=ch5">View</a>
+<br><br>
+<h4>Chapter 7 Outline</h4>
+<a href="{% url 'hview' %}?p=ch7">View</a>
+<br><br>
+<h4>Babies Discussion Questions</h4>
+<a href="{% url 'hview' %}?p=babies">View</a>
+<br><br>
+<h4>Holy Sites Questions</h4>
+<a href="{% url 'hview' %}?p=holy">View</a>
+<br><br>
+<h4>Brazil Article</h4>
+<a href="{% url 'hview' %}?p=brazil">View</a>
+<br><br>
+<h4>The Body Rituals Of The Nacirema</h4>
+<a href="{% url 'hview' %}?p=bp">View</a>
+<br><br>
+<h4>Folk and Popular Culture</h4>
+<a href="{% url 'hview' %}?p=fpc">View</a>
+<br><br>
+<h4>Toponomy</h4>
+<a href="{% url 'hview' %}?p=toponomy">View</a>
+<br><br>
+<h4>Washington Post Map Analysis</h4>
+<a href="{% url 'hview' %}?p=wpa">View</a>
+<br><br>
+<h4>Chapter 6 Religion Webquest</h4>
+<a href="{% url 'hview' %}?p=rwq">View</a>
+<br><br>
+<h4>Study Guide</h4>
+<h5>Not availiable yet.</h5>
+
+{% endblock %}

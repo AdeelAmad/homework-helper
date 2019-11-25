@@ -1,0 +1,143 @@
+{% extends "users/base2.html" %}
+{% block head %}
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-5063335113308319",
+          enable_page_level_ads: true
+     });
+</script>
+{% endblock%}
+{% block content %}
+{% load static %}
+<style>
+      .lnr {
+    display: inline-block;
+    fill: currentColor;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.05em;
+    stroke-width: 1;
+  }
+
+  .services-icon {
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+</style>
+
+<h3 class='alert alert-primary' role='alert'>HHSHomework v0.9 is now live. See updates for more.</h3>
+<h3 class='alert alert-info' role='alert'>Be sure to join our official partner discord at: https://discord.gg/pXeygFF</h3>
+
+  <!-- Hero Section-->
+  <section class="bg-light" style="width: 100%;">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6 order-2 order-lg-1">
+          <img style="margin: 15px;" src="{% static 'users/logo.png' %}">
+          <p class="lead">Fast, quality answers that work. Don't believe us? Click get started for proof.</p>
+          <p><a href="{% url 'register' %}" class="btn btn-primary shadow mr-2">Get Started</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+ <!-- Services-->
+<br><br>
+  <section>
+    <div class="container">
+      <h2>Services</h2>
+      <p class="text-muted mb-5">We currently offer one service with two coming soon.</p>
+      <div class="row">
+        <div class="col-sm-6 col-lg-4 mb-3">
+          <svg class="lnr text-primary services-icon">
+            <use xlink:href="#lnr-magic-wand"></use>
+          </svg>
+          <h6>Answers</h6>
+          <p class="text-muted">We offer quick, reliable, and A earning answers to cross-refrence with your own work. Please do no copy of these answers.</p>
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-3">
+          <svg class="lnr text-primary services-icon">
+            <use xlink:href="#lnr-rocket"></use>
+          </svg>
+          <h6>Speedy Answers</h6>
+          <p class="text-muted">We have answers online propmtly after the assignment is given.</p>
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-3">
+          <svg class="lnr text-primary services-icon">
+            <use xlink:href="#lnr-heart"></use>
+          </svg>
+          <h6>Customer Service</h6>
+          <p class="text-muted">We have a dedicated customer service team ready to help you with your needs. Be sure to hit them up at +1 (925) 331 0629</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<br><br>
+
+<!-- Portfolio-->
+  <section class="bg-light">
+    <div class="container">
+      <h2>Classes</h2>
+      <p class="lead text-muted mb-5">We currently offer answers and tutoring (coming soon) for the follwing classes.</p>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card shadow border-0 h-100">
+            <div class="card-body">
+              <h5> <a href="#" class="text-dark">AP Human Geography</a></h5>
+              <p class="text-muted card-text">We currently offer all of Unit 3 with previous units coming soon.</p>
+              <p class="card-text"><a href="{% url 'aphg' %}">Get</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow border-0 h-100">
+            <div class="card-body">
+              <h5> <a href="#" class="text-dark">Geometry</a></h5>
+              <p class="text-muted card-text">We are currently collecting material to include this class in our library of answers.</p>
+<!--              <p class="card-text"><a href="#">Coming Soon</a></p>-->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow border-0 h-100">
+            <div class="card-body">
+              <h5> <a href="#" class="text-dark">French 1</a></h5>
+              <p class="text-muted card-text">We are currently collecting material to include this class in our library of answers.</p>
+<!--              <p class="card-text"><a href="#">Coming Soon</a></p>-->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow border-0 h-100">
+            <div class="card-body">
+              <h5> <a href="#" class="text-dark">Spanish 1</a></h5>
+              <p class="text-muted card-text">We are currently collecting material to include this class in our library of answers.</p>
+<!--              <p class="card-text"><a href="#">Coming Soon</a></p>-->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow border-0 h-100">
+            <div class="card-body">
+              <h5> <a href="#" class="text-dark">English 1</a></h5>
+              <p class="text-muted card-text">We are currently collecting material to include this class in our library of answers.</p>
+<!--              <p class="card-text"><a href="#">Coming Soon</a></p>-->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow border-0 h-100">
+            <div class="card-body">
+              <h5> <a href="#" class="text-dark">Algebra 1</a></h5>
+              <p class="text-muted card-text">We are currently collecting material to include this class in our library of answers.</p>
+<!--              <p class="card-text"><a href="#">Coming Soon</a></p>-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<br><br>
+<br><br>
+
+{% endblock %}

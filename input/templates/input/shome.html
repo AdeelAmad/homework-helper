@@ -1,0 +1,11 @@
+{% extends "users/base.html" %}
+{% block content %}
+{% if perms.answer.can_create %}
+<h3>This is the staff home page. From here you can approve and/or write answers.</h3>
+<a class="btn btn-primary text-white shadow" href="{% url 'answer-create' %}">Create</a>
+<a class="btn btn-primary text-white shadow" href="{% url 'approve' %}">Approve</a>
+{% else %}
+<h4>You do not have permission to be here.</h4>
+<a class="btn btn-primary text-white shadow" href="{% url 'home' %}">Home</a>
+{% endif %}
+{% endblock %}

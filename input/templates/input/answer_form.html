@@ -1,0 +1,21 @@
+{% extends "users/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+{% if perms.input.answer.can_create %}
+<div class="content-section">
+    <form method="POST">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="">Answers Input</legend>
+                {{ form|crispy }}
+        </fieldset>
+        <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+    </form>
+</div>
+{% else %}
+<h4>You do not have permission to be here.</h4>
+<a class="btn btn-primary text-white shadow" href="{% url 'home' %}">Home</a>
+{% endif %}
+{% endblock %}

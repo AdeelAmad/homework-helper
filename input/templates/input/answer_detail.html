@@ -1,0 +1,30 @@
+{% extends "users/base.html" %}
+{% block head %}
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-5063335113308319",
+          enable_page_level_ads: true
+     });
+</script>
+{% endblock%}
+{% block content %}
+<style>
+  pre {
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+</style>
+
+<article class="media content-section">
+    <div class="media-body">
+      <h2 class="article-title">{{ answer.assignment_name }}</h2>
+      <br>
+      <pre style="font-family: sans-serif" class="article-content">{{ answer.content }}</pre>
+      <br><br>
+    </div>
+  </article>
+{% endblock content %}

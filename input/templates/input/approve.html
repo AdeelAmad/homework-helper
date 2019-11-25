@@ -1,0 +1,16 @@
+{% extends "users/base.html" %}
+{% block content %}
+{% if perms.answer.can_create %}
+<h3>You can approve answers here.</h3>
+{% for post in posts %}
+        <article class="media content-section">
+          <div class="media-body">
+            <h4><a class="article-title" href="{% url 'answer-update' post.id %}">{{ post.assignment_name }}</a></h4>
+          </div>
+        </article>
+    {% endfor %}
+{% else %}
+<h4>You do not have permission to be here.</h4>
+<a class="btn btn-primary text-white shadow" href="{% url 'home' %}">Home</a>
+{% endif %}
+{% endblock %}
