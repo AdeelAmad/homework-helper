@@ -1,11 +1,11 @@
 from django.urls import include, path
-from .views import AnswerCreateView, AnswerAPHGListView, staffHome, approveAns, AnswerApproveView, AnswerListApproveView, AnswerGEOListView, AnswerENG1ListView, AnswerFRE1ListView, AnswerSPAN1ListView, AnswerALG1ListView
+from .views import AnswerCreateView, AnswerAPHGListView, staffHome, approveAns, AnswerApproveView, AnswerListApproveView, AnswerGEOListView, AnswerENG1ListView, AnswerDetailView, AnswerFRE1ListView, AnswerSPAN1ListView, AnswerALG1ListView
 from .classes import DetailViewModified
 
 
 urlpatterns = [
     path('answer/new/', AnswerCreateView.as_view(), name='answer-create'),
-    path('answer/<int:pk>/', DetailViewModified.as_view(), name='answer-detail'),
+    path('answer/<int:pk>/', AnswerDetailView.as_view(), name='answer-detail'),
     path('aphg/', AnswerAPHGListView.as_view(), name='aphg'),
     path('span1/', AnswerSPAN1ListView.as_view(), name='span1'),
     path('eng1/', AnswerENG1ListView.as_view(), name='eng1'),

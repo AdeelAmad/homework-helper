@@ -81,15 +81,15 @@ a:link {
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <a class="dropdown-item" href="{% url 'help' %}">Help</a>
                                 <a class="dropdown-item" href="{% url 'aphg' %}">APHG</a>
-                                <a class="dropdown-item" href="#">Geometry</a>
+                                <!-- <a class="dropdown-item" href="#">Geometry</a> -->
                             </div>
                         </li>
                     </ul>
                     <ul class="navbar-nav ml-auto">
                         {% if user.is_authenticated %}
-                        <li class="nav-item form-inline" style="padding-right: 10px;">
+                        <!-- <li class="nav-item form-inline" style="padding-right: 10px;">
                             <a class="nav-link">Tokens: {{ user.profile.tokens_have }}</a>
-                        </li>
+                        </li> -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             {{ user.username }}
@@ -99,7 +99,7 @@ a:link {
                                 <a class="dropdown-item" href="{% url 'staffhome' %}">Staff</a>
                                 {% endif %}
                                 <a class="dropdown-item" href="{% url 'profile' %}">Profile</a>
-                                <a class="dropdown-item" href="#">Tokens</a>
+                                <!-- <a class="dropdown-item" href="#">Tokens</a> -->
                                 <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
                             </div>
                         </li>
