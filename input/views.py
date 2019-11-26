@@ -7,7 +7,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMix
 
 # Create your views here.
 
-class AnswerCreateView(LoginRequiredMixin, CreateView):
+class AnswerCreateView(LoginRequiredMixin, CreateView, PermissionRequiredMixin):
     model = models.answer
     permission_required = ('answer.can_create')
     fields = ['class_for', 'assignment_name', 'content']
@@ -61,7 +61,6 @@ class AnswerListApproveView(ListView):
     template_name = 'input/approve.html'  # <app>/<model>_<viewtype>.html
     context_object_name = 'posts'
 
-@permission_required('answer.can_create')
 def staffHome(request):
     return render(request, 'input/shome.html')
 
